@@ -16,3 +16,6 @@ after_success:
 - grunt
 - pwd
 - ls -la
+- chmod 600 deploy_key
+- ssh-add deploy_key
+- ssh -p 55713 ejcarron@12.200.178.238 'pwd'
