@@ -1,0 +1,24 @@
+{
+  "name": "Travis-CI",
+  "version": "1.0.0",
+  "description": "A Travis-CI test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erik-carron-temeda/travis-ci.git"
+  },
+  "author": "Erik Carron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erik-carron-temeda/travis-ci/issues"
+  },
+  "homepage": "https://github.com/erik-carron-temeda/travis-ci",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.2",
+    "load-grunt-tasks": "^3.3.0"
+  }
+}

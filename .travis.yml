@@ -5,11 +5,12 @@ branches:
   only:
   - master
 before_install:
-- "echo 'Nothing to do before install.'"
+- npm install -g grunt-cli
 install:
-- "echo 'Nothing to do for install.'"
+- npm install
 script:
 - "echo 'Nothing to do for script.'"
 after_success:
+- grunt
 - pwd
 - ls -la
