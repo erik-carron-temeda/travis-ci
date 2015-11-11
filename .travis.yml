@@ -10,9 +10,6 @@ install:
 - "echo 'Nothing to do for install.'"
 script:
 - "echo 'Nothing to do for script.'"
-before_deploy:
-- "echo 'Nothing to do before deploy.'"
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: deploy/deploy.sh
+after_success:
+- pwd
+- ls -la
