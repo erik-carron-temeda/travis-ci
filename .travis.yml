@@ -3,7 +3,7 @@ node_js:
 - '4.2'
 branches:
   only:
-  - develop
+  - master
 before_install:
 - "echo 'Nothing to do before install.'"
 install:
