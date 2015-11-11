@@ -19,3 +19,4 @@ after_success:
 - chmod 600 deploy_key
 - echo '12.200.178.238 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA0HnQv787AYPAHvXrGiZgWc3oiML1R6yWAdZ0YslNGO354xhivDWh285NwnAszRz2nRBWOQHl96YJLoDEa3bUrRV6vgFmGgAcewMxSoJ8hx8K5U6Ylcoqh38DtWGJwwwFjp9+6X/R9IxA263NJuujfFNogP2TDWVLnL8XVOlyzdrV1/OVxOVnEsETuniZ9sy3SkYBjB5KN48a1HF2Fbkj95E58RgXRYOxdqt8WgXDIiNbAtb8HsYFpXfn1SqKmSdTApBYRCd7A8hJIu0zwcPFuCDxidxbd5XU6iMcCg6J3mS1YHrayeyJRurEXYRAYnQ5HZAhtPEtDL1C+zWTvHdSMQ==' >> ~/.ssh/known_hosts
 - ssh -p 55713 ejcarron@12.200.178.238 -i deploy_key 'pwd'
+- rsync -rvzO -e "ssh -p 55713 -i deploy_key" --delete --delete-excluded --include='*/' --include='index.html' --include='js/PublicInformationApp.min*' --include='css/PublicInformationApp.min*' --include='fonts/***' --include='img/***' --exclude='*' ./build/ ejcarron@12.200.178.238:/var/sites/citydevcentos/
